@@ -18,6 +18,24 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (user.username === '' || user.password === '') {
+      toast.custom(
+        (t) => (
+          <div
+            className={`w-full h-[5rem] bg-[#EB5757] flex justify-start items-center rounded-lg my-3 shadow-2xl hover:shadow-none transform-gpu translate-y-0 hover:translate-y-1 relative transition-all duration-500 ease-in-out ${
+              t.visible ? 'bottom-5' : '-bottom-96'
+            }`}
+          >
+            <h4 className="w-full text-white text-sm font-epilogue font-normal ml-3">
+              Empty fields are not allowed.
+            </h4>
+          </div>
+        ),
+        { id: 'unique-notification', position: 'bottom-center' }
+      );
+      return;
+    }
+
     dispatch(login(user));
   };
 

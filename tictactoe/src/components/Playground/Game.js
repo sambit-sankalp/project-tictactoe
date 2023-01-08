@@ -4,6 +4,7 @@ import Board from './Board';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateGame } from '../../slices/games/updateGameSlice';
 import { Link } from 'react-router-dom';
+import { Toaster, toast } from 'react-hot-toast';
 
 const Game = ({ friendName }) => {
   const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -28,13 +29,12 @@ const Game = ({ friendName }) => {
       setXisNext(game.xIsNext);
       setWinner(game.winner);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     if (success) window.location.reload();
   }, [success]);
-
 
   const handleClick = (i) => {
     if (
@@ -66,6 +66,23 @@ const Game = ({ friendName }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (history.length === game.history.length) {
+      toast.custom(
+        (t) => (
+          <div
+            className={`w-full h-[5rem] bg-[#EB5757] flex justify-start items-center rounded-lg my-3 shadow-2xl hover:shadow-none transform-gpu translate-y-0 hover:translate-y-1 relative transition-all duration-500 ease-in-out ${
+              t.visible ? 'bottom-5' : '-bottom-96'
+            }`}
+          >
+            <h4 className="w-full text-white text-sm font-epilogue font-normal ml-3">
+              Click on the square to make your move
+            </h4>
+          </div>
+        ),
+        { id: 'unique-notification', position: 'bottom-center' }
+      );
+      return;
+    }
     dispatch(
       updateGame({
         id: game._id,
@@ -92,7 +109,6 @@ const Game = ({ friendName }) => {
         game.createdBy.email
       ? 'You'
       : friendName;
-
 
   return (
     <div className="flex justify-center items-center flex-col mt-7">
@@ -163,6 +179,7 @@ const Game = ({ friendName }) => {
           Waiting for Opponent
         </button>
       )}
+      <Toaster />
     </div>
   );
 };

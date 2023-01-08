@@ -17,6 +17,28 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (
+      user.username === '' ||
+      user.name === '' ||
+      user.email === '' ||
+      user.password === ''
+    ) {
+      toast.custom(
+        (t) => (
+          <div
+            className={`w-full h-[5rem] bg-[#EB5757] flex justify-start items-center rounded-lg my-3 shadow-2xl hover:shadow-none transform-gpu translate-y-0 hover:translate-y-1 relative transition-all duration-500 ease-in-out ${
+              t.visible ? 'bottom-5' : '-bottom-96'
+            }`}
+          >
+            <h4 className="w-full text-white text-sm font-epilogue font-normal ml-3">
+              Empty fields are not allowed.
+            </h4>
+          </div>
+        ),
+        { id: 'unique-notification', position: 'bottom-center' }
+      );
+      return;
+    }
     dispatch(register(user));
   };
 
@@ -64,7 +86,7 @@ const Register = () => {
   }, [result]);
 
   return (
-    <div class="w-full p-4 bg-white">
+    <div className="w-full p-4 bg-white">
       <Link to="/">
         <FontAwesomeIcon icon={faChevronLeft} />
       </Link>
@@ -73,7 +95,7 @@ const Register = () => {
           <h5 className="font-extrabold font-epilogue text-sm text-gray-900 dark:text-white">
             Create Account
           </h5>
-          <h5 class="mt-2 font-extrabold font-epilogue text-3xl w-11/12 text-gray-900 dark:text-white">
+          <h5 className="mt-2 font-extrabold font-epilogue text-3xl w-11/12 text-gray-900 dark:text-white">
             Let’s get to know you better!
           </h5>
           <div className="mt-8">
@@ -93,7 +115,7 @@ const Register = () => {
               required
             />
           </div>
-          <div class="mt-4">
+          <div className="mt-4">
             <label
               htmlFor="username"
               className="block my-1 font-bold font-epilogue text-sm text-gray-900"
@@ -110,7 +132,7 @@ const Register = () => {
               required
             />
           </div>
-          <div class="mt-4">
+          <div className="mt-4">
             <label
               htmlFor="email"
               className="block my-1 font-bold font-epilogue text-sm text-gray-900"

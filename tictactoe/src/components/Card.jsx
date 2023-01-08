@@ -21,13 +21,13 @@ const Card = ({ game }) => {
 
   return (
     <>
-      <div className="max-w-sm p-2 my-2 pl-4 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+      <div className="max-w-sm p-2 my-2 pl-4 bg-white border border-gray-200 rounded-lg shadow-md">
         <a href="/">
-          <h5 className="mb-2 text-2xl font-epilogue font-bold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="mb-2 text-2xl font-epilogue font-bold tracking-tight text-gray-900">
             Game with {friend.name}
           </h5>
         </a>
-        <p className="mb-3 text-xm font-normal font-epilogue text-gray-700 dark:text-gray-400">
+        <p className="mb-3 text-xm font-normal font-epilogue text-gray-700">
           {game &&
             (isCompleted
               ? winner === ''
@@ -41,7 +41,7 @@ const Card = ({ game }) => {
               ? `${friend.name} just made their move! It’s your turn to play now.`
               : 'You’ve made your move! Waiting for them.')}
         </p>
-        <p className="mb-3 text-xs font-normal font-epilogue text-gray-700 dark:text-gray-400">
+        <p className="mb-3 text-xs font-normal font-epilogue text-gray-700">
           {new Date(updatedAt).toLocaleString()}
         </p>
         <Link className="w-full" to={`/home/play/${_id}`}>

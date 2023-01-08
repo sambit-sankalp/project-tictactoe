@@ -74,10 +74,10 @@ const GameDetails = () => {
       </Link>
       <form className="mt-10 w-full h-[85vh] flex justify-between items-start flex-col">
         <div className="w-full">
-          <h5 className="font-extrabold font-epilogue text-sm text-gray-900 dark:text-white">
+          <h5 className="font-extrabold font-epilogue text-sm text-gray-900">
             Start a new game
           </h5>
-          <h5 className="mt-2 font-extrabold font-epilogue text-3xl w-11/12 text-gray-900 dark:text-white">
+          <h5 className="mt-2 font-extrabold font-epilogue text-3xl w-11/12 text-gray-900">
             Whom do you want to play with?
           </h5>
           <div className="mt-4">

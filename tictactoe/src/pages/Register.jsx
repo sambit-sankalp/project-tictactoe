@@ -92,16 +92,16 @@ const Register = () => {
       </Link>
       <form className="mt-10 w-full h-[85vh] flex justify-between items-start flex-col">
         <div className="w-full">
-          <h5 className="font-extrabold font-epilogue text-sm text-gray-900 dark:text-white">
+          <h5 className="font-extrabold font-epilogue text-sm text-gray-900">
             Create Account
           </h5>
-          <h5 className="mt-2 font-extrabold font-epilogue text-3xl w-11/12 text-gray-900 dark:text-white">
+          <h5 className="mt-2 font-extrabold font-epilogue text-3xl w-11/12 text-gray-900">
             Let’s get to know you better!
           </h5>
           <div className="mt-8">
             <label
               htmlFor="name"
-              className="font-epilogue font-bold my-2 text-sm text-gray-900 dark:text-white"
+              className="font-epilogue font-bold my-2 text-sm text-gray-900"
             >
               Your name
             </label>
@@ -152,7 +152,7 @@ const Register = () => {
           <div className="mt-4">
             <label
               htmlFor="password"
-              className="block mb-2 font-bold text-sm font-epilogue text-gray-900 dark:text-white"
+              className="block mb-2 font-bold text-sm font-epilogue text-gray-900"
             >
               Password
             </label>

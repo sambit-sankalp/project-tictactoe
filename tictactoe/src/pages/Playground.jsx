@@ -35,14 +35,14 @@ const Playground = () => {
       ) : (
         game && createdBy && player && (
           <>
-            <h5 className="mt-6 font-bold font-epilogue text-2xl text-gray-900 dark:text-white">
+            <h5 className="mt-6 font-bold font-epilogue text-2xl text-gray-900">
               Game with{' '}
               {JSON.parse(localStorage.getItem('userInfo')).email ===
               createdBy.email
                 ? player.name
                 : createdBy.name}
             </h5>
-            <h5 className="font-normal mt-2 font-epilogue text-sm text-gray-900 dark:text-white">
+            <h5 className="font-normal mt-2 font-epilogue text-sm text-gray-900">
               Your Piece
             </h5>
             <img

@@ -71,10 +71,10 @@ const Login = () => {
       </Link>
       <form className="mt-10 w-full h-[85vh] flex justify-between items-start flex-col">
         <div className="w-full">
-          <h5 className="font-extrabold font-epilogue text-sm text-gray-900 dark:text-white">
+          <h5 className="font-extrabold font-epilogue text-sm text-gray-900">
             Login
           </h5>
-          <h5 className="mt-2 font-extrabold font-epilogue text-3xl w-11/12 text-gray-900 dark:text-white">
+          <h5 className="mt-2 font-extrabold font-epilogue text-3xl w-11/12 text-gray-900">
             Please enter your details
           </h5>
           <div className="mt-4">
@@ -97,7 +97,7 @@ const Login = () => {
           <div className="mt-4">
             <label
               htmlFor="password"
-              className="block mb-2 font-bold text-sm font-epilogue text-gray-900 dark:text-white"
+              className="block mb-2 font-bold text-sm font-epilogue text-gray-900"
             >
               Password
             </label>

@@ -6,14 +6,14 @@
 
 <br />
 <p align="center">
-  <a href="https://github.com/Sibasis-Malla/pilot">
+  <a href="https://github.com/sambit-sankalp/project-tictactoe">
     <img src="https://store-images.s-microsoft.com/image/apps.2005.14057826194083709.67242c47-4fd7-4f1a-9dd6-5d93f6cc10df.f80f14c0-72ab-46ff-86cd-9d801c8e04e8?mode=scale&q=90&h=300&w=300" alt="Logo" width="130">
   </a>
 
   <h3 align="center">Tic Tac Toe</h3>
 
   <p align="center">
-    The server repository for the website of PILOT
+    The repository for the Asynchronous Tic Tac Toe Game
     <br />
     <a href="https://project-sam-tictactoe.vercel.app/">View Live</a>
   </p>
@@ -43,7 +43,9 @@
 
 ## About The Project
 
-The Tic-Tac-Toe Game
+An asynchronous version of the tic-tac-toe game would allow players to take their turns at different times, rather than having to be present and play the game in real-time. This can be useful if the players are not able to be present at the same time, or if they prefer to take their time making their moves.
+
+To implement an asynchronous tic-tac-toe game, you would need a way for the players to take their turns and for the game state to be updated and stored after each move. This could be done using a server-client architecture, where the server stores the game state and communicates with the clients (the players' devices) to update the game state and send notifications when it is a player's turn. The clients could be web or mobile applications that allow the players to make their moves and view the current game state.
 
 ## Built With
 
@@ -131,9 +133,9 @@ yarn add <package-name> -D
 
 ## Problems Faced
 
-* Problem faced in deciding the algorithm of Tic Tac Toe Game.
-* Integrating various states of the game with the backend of the project.
-* Handling edge cases of the states of the project.
+* Algorithms: To decide the correct algorithm to define the functionality of the Game.
+* Debugging: To debug the code when the task is not performed correctly or a bug is encountered while the game is running.
+* Managing States: Managing the states of the game at various point of the game using Redux.
 
 ## Contributors ✨
 
@@ -144,7 +146,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/sambit-sankalp"><img src="https://avatars.githubusercontent.com/u/82284130?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sambit Sankalp</b></sub></a><br /><a href="https://github.com/sambit-sankalp/project-pilot/commits?author=sambit-sankalp" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/sambit-sankalp"><img src="https://avatars.githubusercontent.com/u/82284130?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sambit Sankalp</b></sub></a><br /><a href="https://github.com/sambit-sankalp/project-tictactoe/commits?author=sambit-sankalp" title="Code">💻</a></td>
   </tr>
 </table>
 

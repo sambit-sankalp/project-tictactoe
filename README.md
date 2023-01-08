@@ -15,7 +15,7 @@
   <p align="center">
     The repository for the Asynchronous Tic Tac Toe Game
     <br />
-    <a href="https://project-sam-tictactoe.vercel.app/">View Live</a>
+    <a href="https://projecttictactoe.vercel.app/">Live</a>
   </p>
 </p>
 
